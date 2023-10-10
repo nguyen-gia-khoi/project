@@ -52,3 +52,16 @@ function reloadSlider(){
   clearInterval(refreshSlider);
   refreshSlider = setInterval(() => {next.click()},3000);
 }
+function changeColor(myButtonId) {
+  document.getElementById(myButtonId).style.backgroundColor = "white";
+  document.getElementById(myButtonId).style.color = "red";
+  document.getElementById(myButtonId).style.fontWeight = "bold";
+  document.getElementById(myButtonId === 'myButton1' ? 'myButton2' : 'myButton1').style = "";
+  document.getElementById(myButtonId).style.border = "none";
+  document.getElementById(myButtonId).style.borderTopLeftRadius = "5px";
+  document.getElementById(myButtonId).style.borderToprightRadius = "5px";
+  document.getElementById(myButtonId).style.height = "56px";
+  document.getElementById(myButtonId).style.margin = "0 0 -9px";
+  document.getElementById(myButtonId).style.padding = "16px 32px";
+  document.getElementById(myButtonId).style.position = "relative";
+}
