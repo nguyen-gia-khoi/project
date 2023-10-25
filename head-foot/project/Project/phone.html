@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="phone.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+
+        <div class="sticky_nav_bar">
+  
+          <div class="head_logo">
+            <a>
+              <img src="/image/logo/domino-horizontal-dark.svg">
+            </a>
+          </div>
+    
+          <div class="nav_bar">  
+            <ul>
+              <li><a class="nav_link">MÃ E-VOUCHER</a></li>
+              <li><a class="nav_link">KHUYẾN MÃI</a></li>
+              <li><a class="nav_link">THỰC ĐƠN</a></li>
+              <li><a class="nav_link">THEO DÕI ĐƠN HÀNG</a></li>
+              <li><a class="nav_link">BLOG</a></li>
+            </ul>     
+              
+          </div>
+          <div class="translate">
+            <div class="flag">
+              <a class="a_flag">
+                <img src="/image/flags/flag-vn.png">
+              </a>
+            </div>
+  
+            <div class="flag">
+              <a class="a_flag">
+                <img src="/image/flags/flag-en.png">
+              </a>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+    <!-- body -->
+    <div class="body"> 
+            <div class="content"> 
+            <div class="imgbody-dsdh">
+                <img src="/img/stock-stracking.png" class="img-fluid" alt="stock-stracking">
+            </div>
+            <div class="text-order">
+            <div class="text-order-h4">
+                <h4>Theo Dõi Đơn Hàng - Domino's Pizza Việt Nam</h4>
+            </div>  
+            <div class="inputbutton">            
+                    <input class="input" id="phone" type="text" placeholder="Nhập số điện thoại của bạn" name="phone-number">  
+                <button  id="check" class="button" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <p id="message" style="color: red; display: none; font-weight: bold;">Vui lòng nhập số điện thoại của bạn!</p>
+            <p id="success" style="color: red; display: none; font-weight: bold;">Số điện thoại không tồn tại!</p>
+
+        </div>  
+    </div>
+</div>
+<!-- javascript -->
+<script>
+    document.getElementById('check').addEventListener('click', function() {
+        var phone = document.getElementById('phone').value;
+        var message = document.getElementById('message');
+        var success = document.getElementById('success');
+        
+        // Kiểm tra xem input có phải là số điện thoại hay không
+        var isPhoneNumber = /^0[0-9]{9}$/.test(phone);
+        
+        if (isPhoneNumber) {
+            message.style.display = 'none';
+            success.style.display = 'block';
+        } else {
+            message.style.display = 'block';
+            success.style.display = 'none';
+        }
+    });
+    </script>
+
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="body-footer">
+        <div class="div1">
+        <div class="d-flex ">
+            <p class="mb-0">Kết nối Domino's Pizza Việt Nam:</p>          
+                <a href="https://www.facebook.com/DominosPizzaVietnam/?brand_redir=207571100452" target="_blank" >
+                    <i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/dominospizza_vietnam/" target="_blank" >
+                        <i class="fab  fa-instagram"></i></a>                
+                </div>
+            </div>
+            <div class="foot-main">
+       <a href="#dominos.html"> <img class="footer-logo" src="/img/domino.svg" alt="Domino's Pizza Logo"></a> 
+       <div class="hotline">
+        <div class="phone"><h3><i class="fas fa-phone fa-rotate-90"></i> Hotline Đặt Hàng</h3></div>
+        <div class="phone-number">1900 6099</div>
+       </div>
+       <div class="links">
+        <ul>
+            <li> <a href="https://dominos.vn/blog-detail/nhung-mon-an-trong-ngay-sinh-nhat">Blog</a></li>
+            <li><a href="https://tuyendung.vfbs.vn/">Tuyển dụng</a></li>
+            <li><a href="https://dominos.vn/policy">Chính sách</a></li>
+        </ul>
+      </div>        
+        <div class="links">
+            <ul>               
+                <li><a href="#">Thực đơn</a></li>
+                <li><a href="#">Mã e-voucher</a></li>
+                <li> <a href="#">Khuyến mãi</a></li>
+            </ul>
+        </div>
+       <div class="links">
+        <ul>
+            <li> <a href="#">Theo dõi đơn hàng</a></li>
+            <li><a href="#">Danh sách đơn hàng</a></li>
+        </ul>
+       </div>
+       <div class="imgfooter">
+       <a href="http://online.gov.vn/Home/WebDetails/9616" target="_blank" rel="noreferrer">
+        <img src="/img/credentials.png" alt="credentials"></a>
+      </div>        
+    </div>
+    <div class="footer-end">
+      <div class="copyright">
+      © 2020 Domino's Pizza Vietnam | Privacy Policy
+      </div>
+      <div class="block">
+        <span class="button1">Switch to English version</span>
+    </div>
+    </div>
+</div>
+</div> 
+</body>
+</html>
